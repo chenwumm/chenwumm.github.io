@@ -14,34 +14,6 @@
   <!--你敢盗源码???-->
   <hr/>
   <!--hello world!-->
- <script>
-  // 注册表单提交事件处理
-  document.getElementById('registerForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // 阻止表单默认提交行为
-    var username = document.getElementById('registerUsername').value;
-    var password = document.getElementById('registerPassword').value;
-    if (localStorage.getItem(username)) {
-      alert('用户名已存在');
-    } else {
-      localStorage.setItem(username, password); // 将用户名和密码保存到localStorage
-      alert('注册成功');
-    }
-  });
-
-  // 登录表单提交事件处理
-  document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // 阻止表单默认提交行为
-    var username = document.getElementById('loginUsername').value;
-    var password = document.getElementById('loginPassword').value;
-    var storedPassword = localStorage.getItem(username); // 从localStorage获取密码
-    if (storedPassword === password) {
-      alert('登录成功');
-      // 这里可以添加登录成功后的逻辑，比如页面跳转或显示特定内容
-    } else {
-      alert('用户名或密码错误');
-    }
-  });
- </script>
   <p>恭喜你,在网络里找到了我</p>
   <p>这个网站将用于开发和测试</p>
   <p>自己纯手工搓的网站,有点简陋请见谅。</p>
@@ -51,24 +23,6 @@
   <p>记得发申请，不然不加</p>
   <p>上一次更新:2024.8.13</p>
   <p>vichoscript.github.io将迁移到<a href="https://cwbashyxs.github.io/">cwbashyxs.github.io</a>。</p>
- <br>
-  <div id="register">
-  <h2>注册</h2>
-  <form id="registerForm">
-    <input type="text" id="registerUsername" placeholder="用户名" required>
-    <input type="password" id="registerPassword" placeholder="密码" required>
-    <button type="submit">注册</button>
-  </form>
-  </div>
- <br>
-  <div id="login">
-  <h2>登录</h2>
-  <form id="loginForm">
-    <input type="text" id="loginUsername" placeholder="用户名" required>
-    <input type="password" id="loginPassword" placeholder="密码" required>
-    <button type="submit">登录</button>
-  </form>
-  </div>
   <p style="text-align: right;">by 晨雾</p>
   <p style="text-align: right;">现在在 <a href="https://m.baidu.com/s?word=井陉矿区">石家庄市·井陉矿区</a></p>
   
