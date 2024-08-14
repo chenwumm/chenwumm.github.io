@@ -1,1 +1,14 @@
+name: Create User Folders
 
+on: [push]
+
+jobs:
+  create-folders:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+    - run: |
+        mkdir -p user
+        echo "Created user folder"
