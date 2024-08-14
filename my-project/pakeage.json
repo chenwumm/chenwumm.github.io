@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build": "npm run clean && npm install && npm run build:frontend",
+    "build:frontend": "webpack --mode production",
+    "clean": "rimraf dist",
+    "deploy": "npm run build && gh-pages -d dist"
+  }
+}
