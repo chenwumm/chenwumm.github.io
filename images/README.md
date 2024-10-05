@@ -9,6 +9,7 @@
 **相关文件或目录**:
  - back-ground.jpg:网站的背景图片<br>
  - homeimg.jpg:网站最上面的头像<br>
+ - folder.jpg:文件夹图标<br>
  - favicon.ico:网站图标<br>
 **注意事项**:
 1. 请确保所有图像文件都使用合适的压缩格式，以减小文件大小并加快加载速度。<br>
@@ -25,6 +26,7 @@
 
 - back-ground.jpg: Background image of the website<br>
 - homeimg.jpg: Avatar at the top of the website<br>
+- folder.jpg:Folder icon<br>
 - favicon.ico: Website icon<br>
 **Notes**:
 1.Please ensure that all image files are in an appropriate compressed format to reduce file size and speed up loading.<br>
