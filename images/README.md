@@ -7,7 +7,6 @@
 **用途**:存放网站里面看到的所有的图像，包括但是不限于背景图、网站图标等等。<br>
 **创建日期**:2024年10月5日，周六，下午4:37<br>
 **相关文件或目录**:
- - back-ground.jpg:网站的背景图片<br>
  - folder.jpg:文件夹图标<br>
  - favicon.ico:网站图标<br>
 **注意事项**:
@@ -22,8 +21,6 @@
 **Purpose**: To store all images seen on the website, including but not limited to background images, website icons, etc.<br>
 **Creation Date**: Saturday, October 5, 2024, 4:37 PM<br>
 **Related Files or Directories**:
-
-- back-ground.jpg: Background image of the website<br>
 - folder.jpg:Folder icon<br>
 - favicon.ico: Website icon<br>
 **Notes**:<br>
