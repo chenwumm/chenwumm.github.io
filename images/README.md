@@ -28,7 +28,7 @@
 - homeimg.jpg: Avatar at the top of the website<br>
 - folder.jpg:Folder icon<br>
 - favicon.ico: Website icon<br>
-**Notes**:
+**Notes**:<br>
 1.Please ensure that all image files are in an appropriate compressed format to reduce file size and speed up loading.<br>
 2.When adding new images, please name them according to the naming conventions for easy searching and management.<br>
 3.If images involve copyright issues, please ensure proper authorization has been obtained or use free image library resources.<br>
