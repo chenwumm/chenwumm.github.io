@@ -91,6 +91,11 @@
                 localStorage.setItem('username', username);
                 document.getElementById('message').innerText = '登录成功！';
                 // 在实际应用中，这里可能会重定向到另一个页面
+            } else if (username === 'Duan' && password === 'Mini486486'){
+                localStorage.setItem('loggedIn', 'true');
+                localStorage.setItem('username', username);
+                document.getElementById('message').innerText = '登录成功！';
+                // 在实际应用中，这里可能会重定向到另一个页面
             } else {
                 document.getElementById('message').innerText = '用户名或密码错误，请重试。';
             }
