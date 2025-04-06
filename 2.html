@@ -28,16 +28,12 @@ ssh-keygen -t rsa #生成钥匙
   </code>
   然后到MT管理器里打开Termux主目录再打开.ssh目录，查看id_rsa.pub文件并复制公钥。然后再打开https://github.com/，进入我的主页，进入设置页面，找到SSH and GPG Keys，点击New SSH Key。在“Title”中随便输入想要的内容，“Key Type”不更改，在“Key”中填入刚刚复制的 id_rsa.pub 中的内容，然后点击“保存”。然后在Termux里面输入ssh -T git@github.com验证一下是否配置成功。
   <h3>使用python的HTTP.Server预览</h3>
-  直接在终端中执行
-  <code style="color: #ccc;">
-cd chenwumm.github.io
-python -m http.server 8000</code>
-  然后在浏览器中访问<code style="color: #ccc;">http://[::]:8000/</code>就可以预览网站了。
-  <h3>更新本地网站</h3>
   由于我们前面克隆过仓库，所以直接切换到仓库目录:
   <code style="color: #ccc;">cd chenwumm.github.io</code>
-  然后添加页面，写入页面代码，在主页添加文章入口，再切换回主目录:
-  <code style="color: #ccc;">cd ..</code>
+  然后添加页面，写入页面代码，在主页添加文章入口，直接在终端中执行
+  <code style="color: #ccc;">python -m http.server 8000</code>
+  然后在浏览器中访问<code style="color: #ccc;">http://[::]:8000/</code>就可以预览网站了。
+  <h3>更新本地网站</h3>
   我写了一段bash代码，可以自动部署到GitHub上面:
   <code style="color: #ccc;">bswz.sh<hr>
 #!/bin/bash
