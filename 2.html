@@ -23,7 +23,7 @@
   准备工作:下载必要软件包并完成git配置和克隆仓库
   这一步是刚下载termux时候必要的，这里简单描述一下:
   <code style="color: #ccc;">pkg install git python openssh #这里下载Python是因为后面要用HTTP.Server预览，下载openssh是因为要生成公钥
-git clone https://github.com/chenwu/chenwumm.github.io/ #克隆仓库
+git clone https://github.com/chenwumm/chenwumm.github.io/ #克隆仓库
 ssh-keygen -t rsa #生成钥匙
   </code>
   然后到MT管理器里打开Termux主目录再打开.ssh目录，查看id_rsa.pub文件并复制公钥。然后再打开https://github.com/，进入我的主页，进入设置页面，找到SSH and GPG Keys，点击New SSH Key。在“Title”中随便输入想要的内容，“Key Type”不更改，在“Key”中填入刚刚复制的 id_rsa.pub 中的内容，然后点击“保存”。然后在Termux里面输入ssh -T git@github.com验证一下是否配置成功。
