@@ -74,3 +74,23 @@ footer {
     width: 100%;
     bottom: 0;
 }
+.marquee {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .marquee p {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marqueeAnimation 10s linear infinite;
+    }
+
+    @keyframes marqueeAnimation {
+      from {
+        transform: translateX(100%);
+      }
+
+      to {
+        transform: translateX(-100%);
+      }
+    }
