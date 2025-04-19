@@ -94,3 +94,12 @@ footer {
         transform: translateX(-100%);
       }
     }
+.box {
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        padding: 20px;
+        width: 200px;
+        text-align: center;
+      }
