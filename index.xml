@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>晨雾博客</title>
+    <description>晨雾㐅是只屑的博客乄一枚小学生的博客</description>
+    <link>https://chenwumm.github.io/</link>
+    <language>zh-cn</language> <!-- 语言，可按需修改 -->
+    <lastBuildDate>Mon, 26 Apr 2025 0:00 +0800</lastBuildDate> <!-- 最后更新日期 -->
+    <item>
+      <title>快速入门MarkDown!</title>
+      <description>一个MarkDown教程。</description>
+      <link>https://chenwumm.github.io/5.html</link>
+      <pubDate>Mon, 20 Apr 2025 00:00:00 +0800</pubDate> <!-- 发布日期 -->
+      <guid>https://chenwumm.github.io/5.html</guid> <!-- 唯一标识符 -->
+    </item>
+    <item>
+      <title>我的网站有评论区了?</title>
+      <description>本文主要介绍了我是怎样在我的网站中嵌入Cusdis的。</description>
+      <link>https://chenwumm.github.io/4.html</link>
+      <pubDate>Tue, 19 Apr 2025 00:00:00 +0800</pubDate>
+      <guid>https://chenwumm.github.io/4.html</guid>
+    </item>
+    <item>
+      <title>我是如何更新网站的㐅续</title>
+      <description>介绍上个文章遗漏的问题</description>
+      <link>https://chenwumm.github.io/3.html</link>
+      <pubDate>Mon, 13 Apr 2025 00:00:00 +0800</pubDate> <!-- 发布日期 -->
+      <guid>https://chenwumm.github.io/3.html</guid> <!-- 唯一标识符 -->
+    </item>
+    <item>
+      <title>我是如何更新网站的</title>
+      <description>介绍我更新网站的方法</description>
+      <link>https://chenwumm.github.io/2.html</link>
+      <pubDate>Mon, 6 Apr 2025 00:00:00 +0800</pubDate> <!-- 发布日期 -->
+      <guid>https://chenwumm.github.io/2.html</guid> <!-- 唯一标识符 -->
+    </item>
+    <item>
+      <title>网站恢复更新告知</title>
+      <description>网站于2025年3月30日恢复更新</description>
+      <link>https://chenwumm.github.io/1.html</link>
+      <pubDate>Mon, 30 Mar 2025 00:00:00 +0800</pubDate> <!-- 发布日期 -->
+      <guid>https://chenwumm.github.io/1.html</guid> <!-- 唯一标识符 -->
+    </item>
+  </channel>
+</rss>
