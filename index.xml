@@ -7,6 +7,13 @@
     <language>zh-cn</language> <!-- 语言，可按需修改 -->
     <lastBuildDate>Mon, 26 Apr 2025 0:00 +0800</lastBuildDate> <!-- 最后更新日期 -->
     <item>
+      <title>网站更换更新方法记录</title>
+      <description>网站内容更新之初手工编写HTML低效难维护，尝试Hexo无果后，巧用pandoc搭配模板，实现高效格式转换</description>
+      <link>https://chenwumm.github.io/6.html</link>
+      <pubDate>Mon, 1 May 2025 00:00:00 +0800</pubDate> <!-- 发布日期 -->
+      <guid>https://chenwumm.github.io/6.html</guid> <!-- 唯一标识符 -->
+    </item>
+    <item>
       <title>快速入门MarkDown!</title>
       <description>一个MarkDown教程。</description>
       <link>https://chenwumm.github.io/5.html</link>

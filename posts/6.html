@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站更换更新方法记录</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>晨雾博客</h1>
+        <nav>
+            <ul>
+<li><a href="/index.html">主页</a></li>
+                <li><a href="/contact.html">联系我</a></li>
+                <li><a href="/about.html">关于我</a></li>
+                <li><a href="/ann-his.html">公告历史</a></li>
+                <li><a href="/fl.html">友链</a></li>
+                <li><a href="/addfl.html">添加友链</a></li>
+                <li><a href="/index.xml">RSS订阅</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>网站更换更新方法记录</h2>
+            <pre style="white-space: pre-wrap; word-wrap: break-word;"><p>写文章时，我是自己纯手工编写的HTML，这样不仅费时费力，而且难以维护。于是我就想到了用md去写文章，还顺便查了一下Hexo能不能自定义主题。结果是Hexo能自定义主题，于是倒腾了半天，又是迁移目录，又是转换文档格式，又是更换样式改配置文件，最后还是以失败告终。
+然后我又想到了，既然用pandoc可以把MarkDown文件转换成HTML文件，那就可以写一个模板文件，把文章内容写到一个md文件里，再用pd转换格式。
+说做就做，我问了一下豆包，还了解到占位符<code>$title$</code>用于标题，<code>$body$</code>用于文章主体。
+接下来就是转换格式。先转换到网站根目录:<code>cd chenwumm.github.io</code>，输入<code>pandoc md/文章序号.md -o posts/文章序号.html --template plain.html</code>，确实省力了不少。</p></pre>
+        </article>
+    </main>
+<h1>评论</h1>
+<div id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="284a8a19-f56b-49eb-a9ce-5045e10e2419"
+  data-page-id="{{ 网站更换更新方法记录 }}"
+  data-page-url="{{ https://chenwumm.github.io/6.html }}"
+  data-page-title="{{ 网站更换更新方法记录 }}"
+></div>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+<br><br><br>
+    <footer>
+        <p>&copy; 2024~Now 晨雾博客. 版权所有.</p>
+    </footer>
+</body>
+</html>

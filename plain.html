@@ -3,33 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>标题</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>$title$</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <header>
         <h1>晨雾博客</h1>
         <nav>
             <ul>
-                <li><a href="index.html">主页</a></li>
-                <li><a href="contact.html">联系我</a></li>
-                <li><a href="about.html">关于我</a></li>
-                <li><a href="ann-his.html">公告历史</a></li>
-                <li><a href="archives.html">归档</a></li>
-                <li><a href="tags">标签</a></li>
-                <li><a href="fl.html">友链</a></li>
-                <li><a href="addfl.html">添加友链</a></li>
-                <li><a href="index.xml">RSS订阅</a></li>
-                <li><a href="sitemap.xml">网站地图</a></li>
+                <li><a href="/index.html">主页</a></li>
+                <li><a href="/contact.html">联系我</a></li>
+                <li><a href="/about.html">关于我</a></li>
+                <li><a href="/ann-his.html">公告历史</a></li>
+                <li><a href="/fl.html">友链</a></li>
+                <li><a href="/addfl.html">添加友链</a></li>
+                <li><a href="/index.xml">RSS订阅</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <article>
-            <h2>标题</h2>
-            <pre style="white-space: pre-wrap; word-wrap: break-word;"></pre>
+            <h2>$title$</h2>
+            <pre style="white-space: pre-wrap; word-wrap: break-word;">$body$</pre>
         </article>
     </main>
+<h1>评论</h1>
+<div id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="284a8a19-f56b-49eb-a9ce-5045e10e2419"
+  data-page-id="{{ $title$ }}"
+  data-page-url="{{ https://chenwumm.github.io/x.html }}"
+  data-page-title="{{ $title$ }}"
+></div>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 <br><br><br>
     <footer>
         <p>&copy; 2024~Now 晨雾博客. 版权所有.</p>
