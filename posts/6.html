@@ -22,46 +22,68 @@ id="月1日">5月1日</h2>
 接下来就是转换格式。先转换到网站根目录:<code>cd chenwumm.github.io</code>，输入<code>pandoc md/文章序号.md -o posts/文章序号.html --template plain.html</code>，确实省力了不少。</p>
 <h2 id="月3日">5月3日</h2>
 <p>每次改动页面顶部的导航栏，都要到每个页面去改，非常的麻烦。好在智慧(?)的我想到了一个好主意:就是把页面导航栏的源代码写入一个js文件，然后在每页面加载的时候加载js文件，每次改动导航栏的时候，改js文件就可以了。说干就干，我先是用豆包写了一个js代码:</p>
-<p>// 获取页面上用于放置导航栏的元素 const navContainer =
-document.getElementById(‘nav-container’); if (navContainer) { //
-定义包含各个链接的 HTML 字符串 const navHTML =
-<code>&lt;a href="/"&gt;首页&lt;/a&gt;         &lt;a href="#"&gt;联系我&lt;/a&gt;         &lt;a href="#"&gt;关于我&lt;/a&gt;         &lt;a href="#"&gt;公告历史&lt;/a&gt;         &lt;a href="#"&gt;友链&lt;/a&gt;         &lt;a href="#"&gt;添加友链&lt;/a&gt;         &lt;a href="#"&gt;论坛&lt;/a&gt;</code>;
-// 使用 innerHTML 将 HTML 字符串插入到指定元素中 navContainer.innerHTML
-= navHTML; } else {
-console.error(‘找不到用于放置导航栏的元素（id=“nav-container”）’); }</p>
+<pre><code>// 获取页面上用于放置导航栏的元素
+const navContainer = document.getElementById(&#39;nav-container&#39;);
+if (navContainer) {
+    // 定义包含各个链接的 HTML 字符串
+    const navHTML = `
+        &lt;a href=&quot;/&quot;&gt;首页&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;联系我&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;关于我&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;公告历史&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;友链&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;添加友链&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;论坛&lt;/a&gt;
+    `;
+    // 使用 innerHTML 将 HTML 字符串插入到指定元素中
+    navContainer.innerHTML = navHTML;
+} else {
+    console.error(&#39;找不到用于放置导航栏的元素（id=&quot;nav-container&quot;）&#39;);
+}</code></pre>
 <p>然后稍加改动:</p>
-<p>const navContainer = document.getElementById(‘nav’); if
-(navContainer) { const navHTML =
-<code>&lt;nav&gt;             &lt;ul&gt;                 &lt;li&gt;&lt;a href="/index.html"&gt;主页&lt;/a&gt;&lt;/li&gt;                 &lt;li&gt;&lt;a href="/contact.html"&gt;联系我&lt;/a&gt;&lt;/li&gt;                 &lt;li&gt;&lt;a href="/about.html"&gt;关于我&lt;/a&gt;&lt;/li&gt;                 &lt;li&gt;&lt;a href="/ann-his.html"&gt;公告历史&lt;/a&gt;&lt;/li&gt;                 &lt;li&gt;&lt;a href="/fl.html"&gt;友链&lt;/a&gt;&lt;/li&gt;                 &lt;li&gt;&lt;a href="/addfl.html"&gt;添加友链&lt;/a&gt;&lt;/li&gt;                 &lt;li&gt;&lt;a href="http://chenwu.miniban.cn/"&gt;论坛&lt;/a&gt;&lt;/li&gt;             &lt;/ul&gt;         &lt;/nav&gt;</code>;
-navContainer.innerHTML = navHTML; } else {
-console.error(‘找不到用于放置导航栏的元素（id=“nav”）’); }</p>
+<pre><code>const navContainer = document.getElementById(&#39;nav&#39;);
+if (navContainer) {
+    const navHTML = `
+     &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&quot;/index.html&quot;&gt;主页&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/contact.html&quot;&gt;联系我&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/about.html&quot;&gt;关于我&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/ann-his.html&quot;&gt;公告历史&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/fl.html&quot;&gt;友链&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/addfl.html&quot;&gt;添加友链&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;http://chenwu.miniban.cn/&quot;&gt;论坛&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    `;
+    navContainer.innerHTML = navHTML;
+} else {
+    console.error(&#39;找不到用于放置导航栏的元素（id=&quot;nav&quot;）&#39;);
+}</code></pre>
 <p>再改动页面中以前的导航栏代码:</p>
-<div id="nav">
-<script src="/navbar.js"></script>
-</div>
+<pre><code>&lt;div id=&quot;nav&quot;&gt;&lt;script src=&quot;/navbar.js&quot;&gt;&lt;/script&gt;&lt;/div&gt;</code></pre>
 <p>这样就好了，下次再改动顶部导航栏的时候直接改navbar.js就可以了。</p>
-<p>我还写了一段bash代码(代码名 <code>wz.sh</code>)，方便更新网站: `</p>
-<p>#!/bin/bash</p>
-<p>if [[ $1 == “mkpage” ]]; then</p>
-<p>pandoc md/$2.md -o posts/$2.html –template plain.html</p>
-<p>fi</p>
-<p>if [[ $1 == “upload” ]]; then</p>
-<p>echo “转换成网站主目录…”</p>
-<p>cd chenwumm.github.io</p>
-<p>echo “配置用户名和邮箱…”</p>
-<p>git config –global user.name “chenwumm” </p>
-<p>git config –global user.email “496163862@qq.com”</p>
-<p>echo “添加文件到暂存区…”</p>
-<p>git add .</p>
-<p>read -p “请输入提交信息:” cmt</p>
-<p>git commit -m “$cmt”</p>
-<p>echo “提交信息:$cmt 提交这次改动…”</p>
-<p>echo “推送到远端…”</p>
-<p>git push origin main</p>
-<p>fi</p>
-<p><code>然后在termux根目录里的.bashrc文件里加入一行</code>alias wz=“.
-~/wz.sh”<code>，每次更新网站时先写好md页面，然后再</code>cd
-chenwumm.github.io` 切换到网站主目录，最后执行 wz mkpage
+<p>我还写了一段bash代码(代码名 <code>wz.sh</code>)，方便更新网站:</p>
+<pre><code>#!/bin/bash
+if [[ $1 == &quot;mkpage&quot; ]]; then
+pandoc md/$2.md -o posts/$2.html --template plain.html
+fi
+if [[ $1 == &quot;upload&quot; ]]; then
+echo &quot;转换成网站主目录...&quot;
+cd chenwumm.github.io
+echo &quot;配置用户名和邮箱...&quot;
+git config --global user.name &quot;chenwumm&quot;
+git config --global user.email &quot;496163862@qq.com&quot;
+echo &quot;添加文件到暂存区...&quot;
+git add .
+read -p &quot;请输入提交信息:&quot; cmt
+git commit -m &quot;$cmt&quot;
+echo &quot;提交信息:$cmt 提交这次改动...&quot;
+echo &quot;推送到远端...&quot;
+git push origin main
+fi</code></pre>
+<p>然后在termux根目录里的.bashrc文件里加入一行<code>alias wz=". ~/wz.sh"</code>，每次更新网站时先写好md页面，然后再
+<code>cd chenwumm.github.io</code> 切换到网站主目录，最后执行 wz mkpage
 刚更新的网站序号;wz upload 就可以了。</p></pre>
         </article>
     </main>
@@ -70,7 +92,7 @@ chenwumm.github.io` 切换到网站主目录，最后执行 wz mkpage
   data-host="https://cusdis.com"
   data-app-id="284a8a19-f56b-49eb-a9ce-5045e10e2419"
   data-page-id="{{ 网站更换更新方法记录 }}"
-  data-page-url="{{ https://chenwumm.github.io/6.html }}"
+  data-page-url="{{ https://chenwumm.github.io/x.html }}"
   data-page-title="{{ 网站更换更新方法记录 }}"
 ></div>
 <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
