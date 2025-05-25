@@ -11,6 +11,7 @@ if (navContainer) {
                 <li><a href="/nav/addfl.html">添加友链</a></li>
                 <li><a href="http://chenwu.miniban.cn/">社区</a></li>
                 <li><a href="/doc">文档</a></li>
+                <li><a href="/scratch">猫舍</a></li>
             </ul>
         </nav>
     `;
