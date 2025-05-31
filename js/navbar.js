@@ -4,8 +4,8 @@ if (navContainer) {
      <nav>
             <ul>
                 <li><a href="/">主页</a></li>
-                <li><a href="/nav/contact.html">联系我</a></li>
-                <li><a href="/nav/about.html">关于我</a></li>
+                <li><a href="/nav/contact.html">联系</a></li>
+                <li><a href="/nav/about.html">关于</a></li>
                 <li><a href="/nav/ann-his.html">公告历史</a></li>
                 <li><a href="/nav/fl.html">友链</a></li>
                 <li><a href="/nav/addfl.html">添加友链</a></li>
