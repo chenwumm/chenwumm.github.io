@@ -12,7 +12,7 @@ if (navContainer) {
                 <li><a href="http://chenwu.miniban.cn/">社区</a></li>
                 <li><a href="/doc">文档</a></li>
                 <li><a href="/scratch">猫舍</a></li>
-                <li><a href="https://cwpc.zulipchat.com/#narrow/channel/506994-.E6.99.A8.E9.9B.BE.E8.81.8A.E5.A4.A9.E5.AE.A4">聊天室</a></li>
+                <li><a href="/nav/chat.html">聊天室</a></li>
             </ul>
         </nav>
     `;
