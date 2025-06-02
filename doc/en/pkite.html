@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaperKite Documentation</title>
+    <link rel="stylesheet" href="../md.css">
+</head>
+<body>
+    <a href="/">Return to Home</a>
+    <a href="../pkite.html">Chinese Version</a>
+    <header>
+        <h1>🪁 PaperKite Minimal Version Control System</h1>
+        <p class="subtitle">✨ Light as a Kite | Only 140 Lines of Code | Beginner-Friendly</p>
+    </header>
+
+    <nav class="toc">
+        <h2>📂 Table of Contents</h2>
+        <ul>
+            <li><a href="#quick-start">1. Quick Start 🚀</a></li>
+            <li><a href="#features">2. Core Features 📚</a></li>
+            <li><a href="#about">3. About the Project ❓</a></li>
+            <li><a href="#support">4. Support the Project 🌟</a></li>
+        </ul>
+    </nav>
+
+    <section id="quick-start">
+        <h2>🚀 1. Quick Start</h2>
+        <div class="code-block">
+            <pre><code># Clone repository (🌟Stars appreciated)
+git clone https://github.com/chenwumm/PaperKite/
+
+# Create project directory
+mkdir my_project && cd my_project
+
+# Initialize repository 🌱
+python ~/PaperKite/pkite.py init
+
+# Add all files ➕
+python ~/PaperKite/pkite.py add .
+
+# First commit 💌
+python ~/PaperKite/pkite.py commit "Hello PaperKite!"</code></pre>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2>📚 2. Core Features</h2>
+        
+        <article class="feature">
+            <h3>📦 Repository Initialization</h3>
+            <pre><code>python ~/PaperKite/pkite.py init</code></pre>
+            <ul>
+                <li>Creates hidden <code>.pkite</code> directory</li>
+                <li>Generates <code>HEAD</code> and <code>index</code> files</li>
+                <li class="warning">❗️ Warns if repository already exists</li>
+            </ul>
+        </article>
+
+        <article class="feature">
+            <h3>➕ File Tracking</h3>
+            <div class="code-group">
+                <pre><code># Add single file
+python ~/PaperKite/pkite.py add README.md</code></pre>
+                <pre><code># Add entire directory
+python ~/PaperKite/pkite.py add .</code></pre>
+            </div>
+            <ul>
+                <li>Stores file contents using SHA-1 hash</li>
+                <li>Automatically ignores <code>.pkite</code> directory</li>
+            </ul>
+        </article>
+    </section>
+    <section id="about">
+        <h2>❓ 3. About the Project</h2>
+        <div class="about">
+            <h3>Why the name "PaperKite"?</h3>
+            <p>PaperKite translates to "paper kite," where "paper" represents the project's lightweight nature, and "kite" symbolizes its flexibility and ease of use.
+            <h3>What are the advantages?</h3>
+            <p>1. Approximately 160 lines of code, compact size.<br>
+            2. Retains core features of other version control systems (like Git, SVN) such as initialization and commits.</p>
+            <h3>What are the disadvantages?</h3>
+            <p>1. Compared to Git and other VCS, PKite lacks branch concepts, code diff functionality, etc.<br>
+            2. Cannot view commit history.<br>
+            3. Not suitable for large projects or team collaboration.</p>
+            <h3>What scenarios is it suitable for?</h3>
+            <p>1. Suitable for personal development and small to medium projects.<br>
+            2. Suitable for learning the basic principles of VCS (Version Control Systems).</p>
+        </div>
+    </section>
+    <section id="support">
+        <h2>🌟 4. Support the Project</h2>
+        <div class="callout">
+            <p>This is the author's first open-source project. Welcome to contribute your ideas on GitHub:
+                <a href="https://github.com/chenwumm/PaperKite" target="_blank">
+                    https://github.com/chenwumm/PaperKite
+                </a>
+            </p>
+            <p>🌈 Your Stars are my motivation to fly higher. Looking forward to your Issues and PRs.</p>
+        </div>
+    </section>
+    <h3>Postscript</h3>
+    <p>This documentation was written with the help of DeepSeek, so it might contain some AI elements. Please excuse this.</p>
+    <footer>
+        <p>© 2025 PaperKite | Documentation Version 1.1</p>
+        <p>Translation by DeepSeek AI</p>
+    </footer>
+</body>
+</html>
