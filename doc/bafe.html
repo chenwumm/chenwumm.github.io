@@ -10,90 +10,61 @@
 <a href="./en/bafe.html">English</a>
 <body>
 <h1>BAFE使用文档</h1>
-    <p>2025-6-2 版本V1.0</p>
-    
-    <h2 id="toc">目录</h2>
-    <ul>
-        <li><a href="#intro">项目说明</a></li>
-        <li><a href="#quickstart">快速开始</a></li>
-        <li><a href="#help">使用帮助</a></li>
-    </ul>
-    
-    <h2 id="intro">项目说明</h2>
-    <p>这个项目是我在玩<a href="https://bellard.org/jslinux/" target="_blank">JSLinux</a>的时候，无意中发现一个叫red的命令，然后我就执行了下，发现一回车就是一问号，直接查了下AI，发现这个命令其实是一个行编辑器，是ed的受限版本。又转念一想，我自己也能用bash开发一个行编辑器呀，然后就有了这个编辑器。</p>
-    <p>BAFE是一个bash脚本，全称是BAsh File Editor BASH文件编辑器。</p>
-    
-    <h2 id="quickstart">快速开始</h2>
-    <p>快速开始，也就是安装说明(?)</p>
-    
-    <h3>1.安装git</h3>
-    <p>这个应该都会吧，我就不讲了。</p>
-    <p>(不讲的原因，第一懒得讲应该都会，第二，每个系统的包管理器都不一样)</p>
-    
-    <h3>2.克隆仓库</h3>
-    <pre><code>git clone https://github.com/chenwumm/bafe/</code></pre>
-    
-    <h3>3.愉快的(?)使用BAFE</h3>
-    <p>在你的命令行执行</p>
-    <pre><code>bash ~/bafe/bafe.sh</code></pre>
-    <p>这个是中文版，如果你的终端不支持显示中文字符建议执行英文版。</p>
-    <p>英文版执行</p>
-    <pre><code>bash ~/bafe/bafe-en.sh</code></pre>
-    
-    <h2 id="help">使用帮助</h2>
-    <table border="1">
-        <tr>
-            <th>命令</th>
-            <th>说明</th>
-        </tr>
-        <tr>
-            <td><code>i</code></td>
-            <td>进入插入模式（输入 '.' 结束）</td>
-        </tr>
-        <tr>
-            <td><code>p</code></td>
-            <td>打印当前行</td>
-        </tr>
-        <tr>
-            <td><code>a</code></td>
-            <td>在末尾追加文本</td>
-        </tr>
-        <tr>
-            <td><code>d</code></td>
-            <td>删除当前行</td>
-        </tr>
-        <tr>
-            <td><code>w 文件名</code></td>
-            <td>保存文件</td>
-        </tr>
-        <tr>
-            <td><code>l 文件名</code></td>
-            <td>加载文件</td>
-        </tr>
-        <tr>
-            <td><code>/关键词</code></td>
-            <td>搜索内容</td>
-        </tr>
-        <tr>
-            <td><code>n</code></td>
-            <td>跳转到下一个匹配项</td>
-        </tr>
-        <tr>
-            <td><code>q</code></td>
-            <td>退出编辑器</td>
-        </tr>
-        <tr>
-            <td><code>h</code></td>
-            <td>显示帮助</td>
-        </tr>
-        <tr>
-            <td><code>数字</code></td>
-            <td>跳转到指定行（如 '3'）</td>
-        </tr>
-    </table>
-    
-    <hr>
-    <p>All Done~</p>
-    <p>(c) Copyright 2025 版权所有 | BAFE使用文档</p>
+<p>2025-6-2 版本V1.0</p>
+
+<h2>目录</h2>
+<ul>
+  <li><a href="#目录">目录</a></li>
+  <li><a href="#项目说明">项目说明</a></li>
+  <li><a href="#快速开始">快速开始</a></li>
+  <li><a href="#使用帮助">使用帮助</a></li>
+</ul>
+
+<h2 id="项目说明">项目说明</h2>
+<p>这个项目是我在玩<a href="https://bellard.org/jslinux/">JSLinux</a>的时候，无意中发现一个叫red的命令，然后我就执行了下，发现一回车就是一问号，直接查了下AI，发现这个命令其实是一个行编辑器，是ed的受限版本。又转念一想，我自己也能用bash开发一个行编辑器呀，然后就有了这个编辑器。</p>
+<p>BAFE是一个bash脚本，全称是BAsh File Editor BASH文件编辑器。</p>
+
+<h2 id="快速开始">快速开始</h2>
+<p>快速开始，也就是安装说明(?)</p>
+<p><strong>1.安装git</strong></p>
+<p>这个应该都会吧，我就不讲了。</p>
+<p>(不讲的原因，第一懒得讲应该都会，第二，每个系统的包管理器都不一样)</p>
+
+<p><strong>2.克隆仓库</strong></p>
+<pre><code>git clone https://github.com/chenwumm/bafe/</code></pre>
+
+<p><strong>3.愉快的(?)使用BAFE</strong></p>
+<p>在你的命令行执行</p>
+<pre><code>bash ~/bafe/bafe.sh</code></pre>
+<p>这个是中文版，如果你的终端不支持显示中文字符建议执行英文版。</p>
+<p>英文版执行</p>
+<pre><code>bash ~/bafe/bafe-en.sh</code></pre>
+
+<h2 id="使用帮助">使用帮助</h2>
+<p>?BAFE 行编辑器 - 帮助手册</p>
+<ul>
+  <li>i       进入插入模式（在当前行前插入，输入 '.' 结束）</li>
+  <li>I       在文件开头插入（输入 '.' 结束）</li>
+  <li>a       在当前位置后追加（输入 '.' 结束）</li>
+  <li>A       在文件末尾追加（输入 '.' 结束）</li>
+  <li>p       打印当前行</li>
+  <li>P       打印所有行（带行号）</li>
+  <li>n       显示总行数</li>
+  <li>d       删除当前行</li>
+  <li>D       删除所有行</li>
+  <li>w [文件] 保存文件</li>
+  <li>l [文件] 加载文件</li>
+  <li>/模式    搜索内容</li>
+  <li>N       跳转到下一个匹配项</li>
+  <li>g 行号  跳转到指定行</li>
+  <li>q       退出编辑器（确认未保存更改）</li>
+  <li>Q       强制退出不保存</li>
+  <li>h       显示帮助</li>
+  <li>!命令   执行shell命令</li>
+</ul>
+
+<hr>
+<p>All Done~</p>
+<p>(c) Copyright 2025 版权所有 | BAFE使用文档</p>
 </body>
 </html>

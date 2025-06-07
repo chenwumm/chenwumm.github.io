@@ -9,92 +9,63 @@
 <a href="/">Return to Home</a>
 <a href="../bafe.html">Chinese Version</a>
 <body>
-<h1>BAFE Documentation</h1>
-    <p>June 2, 2025 Version V1.0</p>
-    
-    <h2 id="toc">Table of Contents</h2>
-    <ul>
-        <li><a href="#intro">Project Description</a></li>
-        <li><a href="#quickstart">Quick Start</a></li>
-        <li><a href="#help">Usage Guide</a></li>
-    </ul>
-    
-    <h2 id="intro">Project Description</h2>
-    <p>This project was inspired when I was playing with <a href="https://bellard.org/jslinux/" target="_blank">JSLinux</a> and accidentally discovered a command called 'red'. After executing it, I saw it just showed a question mark. After checking with AI, I learned it was actually a line editor - a restricted version of 'ed'. Then it occurred to me that I could develop my own line editor using bash, and thus this editor was born.</p>
-    <p>BAFE is a bash script, with the full name being BAsh File Editor.</p>
-    
-    <h2 id="quickstart">Quick Start</h2>
-    <p>Quick start, aka installation guide (?)</p>
-    
-    <h3>1. Install git</h3>
-    <p>You should already know how to do this, so I won't explain it.</p>
-    <p>(The reasons I'm not explaining: 1. You should know already, 2. Package managers differ across systems)</p>
-    
-    <h3>2. Clone the repository</h3>
-    <pre><code>git clone https://github.com/chenwumm/bafe/</code></pre>
-    
-    <h3>3. Enjoy (?) using BAFE</h3>
-    <p>Execute in your command line:</p>
-    <pre><code>bash ~/bafe/bafe.sh</code></pre>
-    <p>This is the Chinese version. If your terminal doesn't support Chinese characters, it's recommended to use the English version.</p>
-    <p>For English version execute:</p>
-    <pre><code>bash ~/bafe/bafe-en.sh</code></pre>
-    
-    <h2 id="help">Usage Guide</h2>
-    <table border="1">
-        <tr>
-            <th>Command</th>
-            <th>Description</th>
-        </tr>
-        <tr>
-            <td><code>i</code></td>
-            <td>Enter insert mode (enter '.' to end)</td>
-        </tr>
-        <tr>
-            <td><code>p</code></td>
-            <td>Print current line</td>
-        </tr>
-        <tr>
-            <td><code>a</code></td>
-            <td>Append text at the end</td>
-        </tr>
-        <tr>
-            <td><code>d</code></td>
-            <td>Delete current line</td>
-        </tr>
-        <tr>
-            <td><code>w filename</code></td>
-            <td>Save file</td>
-        </tr>
-        <tr>
-            <td><code>l filename</code></td>
-            <td>Load file</td>
-        </tr>
-        <tr>
-            <td><code>/keyword</code></td>
-            <td>Search content</td>
-        </tr>
-        <tr>
-            <td><code>n</code></td>
-            <td>Jump to next match</td>
-        </tr>
-        <tr>
-            <td><code>q</code></td>
-            <td>Quit editor</td>
-        </tr>
-        <tr>
-            <td><code>h</code></td>
-            <td>Show help</td>
-        </tr>
-        <tr>
-            <td><code>number</code></td>
-            <td>Jump to specified line (e.g. '3')</td>
-        </tr>
-    </table>
-    
-    <hr>
-    <p>All Done~</p>
-    <p>(c) Copyright 2025 All Rights Reserved | BAFE Documentation</p>
-    <p>Translation by DeepSeek</p>
+<h1>BAFE User Documentation</h1>
+<p>Version V1.0 - 2025-06-02</p>
+
+<h2>Table of Contents</h2>
+<ul>
+  <li><a href="#table-of-contents">Table of Contents</a></li>
+  <li><a href="#project-description">Project Description</a></li>
+  <li><a href="#quick-start">Quick Start</a></li>
+  <li><a href="#usage-help">Usage Help</a></li>
+</ul>
+
+<h2 id="project-description">Project Description</h2>
+<p>This project began when I was experimenting with <a href="https://bellard.org/jslinux/">JSLinux</a> and accidentally discovered a command called 'red'. After executing it, I noticed it displayed a question mark upon pressing enter. After consulting AI, I learned it was actually a line editor - a restricted version of 'ed'. Then it occurred to me that I could develop my own line editor using bash, and thus BAFE was born.</p>
+<p>BAFE is a bash script, with the full name "BAsh File Editor".</p>
+
+<h2 id="quick-start">Quick Start</h2>
+<p>Quick start, aka installation instructions (?)</p>
+<p><strong>1. Install git</strong></p>
+<p>You probably know how to do this already, so I won't explain.</p>
+<p>(The reasons I'm not explaining: first, you should already know; second, package managers vary across different systems)</p>
+
+<p><strong>2. Clone the repository</strong></p>
+<pre><code>git clone https://github.com/chenwumm/bafe/</code></pre>
+
+<p><strong>3. Enjoy (?) using BAFE</strong></p>
+<p>Execute in your command line:</p>
+<pre><code>bash ~/bafe/bafe.sh</code></pre>
+<p>This is the Chinese version. If your terminal doesn't support Chinese characters, we recommend using the English version.</p>
+<p>For English version execute:</p>
+<pre><code>bash ~/bafe/bafe-en.sh</code></pre>
+
+<h2 id="usage-help">Usage Help</h2>
+<p>?BAFE Line Editor - Help Manual</p>
+<ul>
+  <li>i       Enter insert mode (insert before current line, enter '.' to end)</li>
+  <li>I       Insert at beginning of file (enter '.' to end)</li>
+  <li>a       Append after current position (enter '.' to end)</li>
+  <li>A       Append at end of file (enter '.' to end)</li>
+  <li>p       Print current line</li>
+  <li>P       Print all lines (with line numbers)</li>
+  <li>n       Show total line count</li>
+  <li>d       Delete current line</li>
+  <li>D       Delete all lines</li>
+  <li>w [file] Save file</li>
+  <li>l [file] Load file</li>
+  <li>/pattern Search content</li>
+  <li>N       Jump to next match</li>
+  <li>g line# Jump to specific line</li>
+  <li>q       Quit editor (confirm unsaved changes)</li>
+  <li>Q       Force quit without saving</li>
+  <li>h       Show help</li>
+  <li>!command Execute shell command</li>
+</ul>
+
+<hr>
+<p>All Done~</p>
+<p>(c) Copyright 2025 All Rights Reserved | BAFE User Documentation</p>
+<p>Translation by DeepSeek AI</p>
 </body>
 </html>
