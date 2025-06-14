@@ -1,20 +1,9 @@
 const navContainer = document.getElementById('nav');
 if (navContainer) {
     const navHTML = `
-     <nav>
-            <ul>
-                <li><a href="/">主页</a></li>
-                <li><a href="/nav/contact.html">联系</a></li>
-                <li><a href="/nav/about.html">关于</a></li>
-                <li><a href="/nav/ann-his.html">公告历史</a></li>
-                <li><a href="/nav/fl.html">友链</a></li>
-                <li><a href="/nav/addfl.html">添加友链</a></li>
-                <li><a href="http://chenwu.miniban.cn/">社区</a></li>
-                <li><a href="/doc">文档</a></li>
-                <li><a href="/scratch">猫舍</a></li>
-                <li><a href="/nav/chat.html">聊天室</a></li>
-            </ul>
-        </nav>
+<nav><pre>
+<a href="/">主页</a> <a href="/nav/contact.html">联系</a> <a href="/nav/about.html">关于</a> <a href="/nav/ann-his.html">公告历史</a> <a href="/nav/fl.html">友链</a> <a href="/nav/addfl.html">添加友链</a> <a href="http://chenwu.miniban.cn/">社区</a> <a href="/doc">文档</a> <a href="/scratch">猫舍</a> <a href="/nav/chat.html">聊天室</a>
+</pre></nav>
     `;
     navContainer.innerHTML = navHTML;
 } else {
