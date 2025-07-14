@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美化自己的bash终端(Termux)</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="typing"></h1><script src="/js/type.js"></script>
+        <div id="nav"><script src="/js/navbar.js"></script></div>
+    </header>
+    <main>
+        <article>
+            <h2>美化自己的bash终端(Termux)</h2>
+            <pre style="white-space: normal; word-wrap: break-word;"><p>好吧，我承认自己是用惯bash了，于是干脆改了回来:</p>
+<pre><code>chsh</code></pre>
+<p>然后在提示符里输入bash，在重启终端，即可把默认终端切换回bash
+我又想到，既然zsh能用Oh My Zsh美化，那么bash是不是也可以自己美化呢?
+话不多说，开始动手查资料和写代码。
+相信学过bash的人大概都知道，bash的终端提示符是由<code>$PS1</code>变量掌控的，所以，如果想修改提示符样式，可以修改<code>$PS1</code>变量的内容。然后再把你修改的内容写到.bashrc文件里，就可以实现改变终端提示符样式的效果。这里我改成这样了</p>
+<pre><code>current_dir() {
+    pwd
+}
+current_user() {
+    whoami
+}
+status_code() {
+    echo $?
+}
+current_time() {
+    date +&quot;%Y-%m-%d %H:%M&quot;
+}
+PS1=&#39;\n $(current_time) \n \033[33m┌\033[0m[\033[32m$(current_dir)\033[0m]-[\033[32m$(current_user)\033[0m]-[\033[32m$(status_code)\033[0m]\n \033[33m└\033[0m&gt; &#39;</code></pre>
+<p>显示效果是这样: <img src="/pic/12/1.png">那再来说一下字体和配色。
+这里是美化Termux，所以我们可以下载Termux-style包:</p>
+<pre><code>git clone https://github.com/adi1090x/termux-style.git</code></pre>
+<p>下载好后，输入下面几行命令:</p>
+<pre><code>cd termux-style
+chmod +x install #授予安装文件执行权限
+./install #安装Termux-style
+termux-style</code></pre>
+<p>然后就可以选择自己喜欢的字体和配色了，这里我选择的字体是Iosevka，配色是neon。
+效果是这样:<img src="/pic/12/2.png"></p></pre>
+        </article>
+    </main>
+<h1>评论</h1>
+<div id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="284a8a19-f56b-49eb-a9ce-5045e10e2419"
+  data-page-id="{{ 美化自己的bash终端(Termux) }}"
+  data-page-url="{{ https://chenwumm.github.io/posts/12.html }}"
+  data-page-title="{{ 美化自己的bash终端(Termux) }}"
+></div>
+<script defer src="https://cusdis.com/js/widget/lang/zh-cn.js"></script>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+<br><br><br>
+    <footer>
+        <p>&copy; 2024~Now 雾曰. 版权所有.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux之yes命令你不知道的用法</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="typing"></h1><script src="/js/type.js"></script>
+        <div id="nav"><script src="/js/navbar.js"></script></div>
+    </header>
+    <main>
+        <article>
+            <h2>Linux之yes命令你不知道的用法</h2>
+            <pre style="white-space: normal; word-wrap: break-word;"><p>很多人可能没听说过<code>yes</code>这个命令。当你执行这个命令的时候，终端就会不断输出<code>y</code>，直到你手动终止(Ctrl+C):</p>
+<pre><code>~$ yes
+y
+y
+y
+y
+y
+...</code></pre>
+<p>它的用法是:</p>
+<pre><code>~$ yes --help
+用法：
+yes [STRING]...
+或：
+yes OPTION
+
+描述：
+重复输出一行，包含所有指定的字符串，或者默认输出 &#39;y&#39;。
+
+选项：
+
+
+--help：显示此帮助信息并退出。
+--version：输出版本信息并退出。
+
+更多信息：
+
+
+GNU coreutils 在线帮助：https://www.gnu.org/software/coreutils/
+翻译相关问题反馈：https://translationproject.org/team/
+完整文档：https://www.gnu.org/software/coreutils/yes
+或者通过本地命令查看：info &#39;(coreutils) yes invocation&#39;</code></pre>
+(yes命令帮助文档翻译) 
+那么，这个命令到底是干什么的呢？
+其实这个命令并非没有用，相反它有很多用处。
+<h3>一 自动回答</h3>
+是不是遇到过这样的情况:你在升级包管理器或者下载某个包的时候，你去干别的事情了，正好到了确认是否升级(或安装某个包)的环节，然后就卡在那里不动了。这样很浪费时间。但是你可以通过yes命令结合包管理器来使用:
+<pre><code>yes | apt update &amp;&amp; apt upgrade #这里是举例子，假设您使用的是apt</code></pre>
+<p>这个命令的意思是，在升级包管理器的时候，yes命令通过管道(<code>|</code>)把输出(<code>y</code>)重定向到了升级包管理器的命令里，这样每当包管理器提示是否进行下一步时都会接收到yes命令的输出，就进行下一步。</p>
+<h3>二 生成大文件或大量生成文件。</h3>
+你可以使用yes命令生成大文件，有两种方式: 
+<strong>一</strong>手动终止:
+<pre><code>$ yes &quot;content&quot; &gt;&gt; largefile.txt</code></pre>
+这个命令会把”content”无限次的追加到largefile.txt，直到手动终止(Ctrl+C)。
+<strong>二</strong> 指定大小:
+<pre><code>yes &quot;&quot; | head -c 1G &gt; largefile.txt</code></pre>
+这个命令会生成1G的空文件。
+<pre><code>yes | head -n 100 | xargs -I{} touch file{}</code></pre>
+这个命令会生成100个文件。文件名为file1、file2、file3等。
+<h3>三 测试系统负载</h3>
+你可以使用<code>yes</code>命令来测试系统负载。在终端中输入<code>yes</code>，然后你可以使用<code>top</code>或者<code>htop</code>来查看系统在高负载情况下的表现。
+或者你可以使用<code>tmux</code>来配合测试:
+首先输入<code>tmux</code>，然后<code>Ctrl+b</code>再按下<code>"</code>水平分割屏幕，在下面的窗口执行<code>yes</code>，然后<code>Ctrl+b</code>再按一下<code>Alt</code>再按一下<code>↑</code>(上键)切换到上面的窗口，输入<code>top</code>观察系统负载情况。</p>
+<p>总而言之，<code>yes</code>命令是一个自动化脚本中非常实用的命令。你可以通过和其他命令结合使脚本更灵活。</p></pre>
+        </article>
+    </main>
+<h1>评论</h1>
+<div id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="284a8a19-f56b-49eb-a9ce-5045e10e2419"
+  data-page-id="{{ Linux之yes命令:你不知道的用法 }}"
+  data-page-url="{{ https://chenwumm.github.io/posts/Linux之yes命令:你不知道的用法.html }}"
+  data-page-title="{{ Linux之yes命令:你不知道的用法 }}"
+></div>
+<script defer src="https://cusdis.com/js/widget/lang/zh-cn.js"></script>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+<br><br><br>
+    <footer>
+        <p>&copy; 2024~Now 雾曰. 版权所有.</p>
+    </footer>
+</body>
+</html>

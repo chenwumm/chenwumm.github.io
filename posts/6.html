@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站更换更新方法记录</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="typing"></h1><script src="/js/type.js"></script>
+        <div id="nav"><script src="/js/navbar.js"></script></div>
+    </header>
+    <main>
+        <article>
+            <h2>网站更换更新方法记录</h2>
+            <pre style="white-space: normal; word-wrap: break-word;"><h2 id="月1日">5月1日</h2>
+            <p>写文章时，我是自己纯手工编写的HTML，这样不仅费时费力，而且难以维护。于是我就想到了用md去写文章，还顺便查了一下Hexo能不能自定义主题。结果是Hexo能自定义主题，于是倒腾了半天，又是迁移目录，又是转换文档格式，又是更换样式改配置文件，最后还是以失败告终。
+然后我又想到了，既然用pandoc可以把MarkDown文件转换成HTML文件，那就可以写一个模板文件，把文章内容写到一个md文件里，再用pd转换格式。
+说做就做，我问了一下豆包，还了解到占位符<code>$title$</code>用于标题，<code>$body$</code>用于文章主体。
+接下来就是转换格式。先转换到网站根目录:<code>cd chenwumm.github.io</code>，输入<code>pandoc md/文章序号.md -o posts/文章序号.html --template plain.html</code>，确实省力了不少。</p>
+<h2 id="月3日">5月3日</h2>
+<p>每次改动页面顶部的导航栏，都要到每个页面去改，非常的麻烦。好在智慧(?)的我想到了一个好主意:就是把页面导航栏的源代码写入一个js文件，然后在每页面加载的时候加载js文件，每次改动导航栏的时候，改js文件就可以了。说干就干，我先是用豆包写了一个js代码:</p>
+<pre><code>// 获取页面上用于放置导航栏的元素
+const navContainer = document.getElementById(&#39;nav-container&#39;);
+if (navContainer) {
+    // 定义包含各个链接的 HTML 字符串
+    const navHTML = `
+        &lt;a href=&quot;/&quot;&gt;首页&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;联系我&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;关于我&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;公告历史&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;友链&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;添加友链&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;论坛&lt;/a&gt;
+    `;
+    // 使用 innerHTML 将 HTML 字符串插入到指定元素中
+    navContainer.innerHTML = navHTML;
+} else {
+    console.error(&#39;找不到用于放置导航栏的元素（id=&quot;nav-container&quot;）&#39;);
+}</code></pre>
+<p>然后稍加改动:</p>
+<pre><code>const navContainer = document.getElementById(&#39;nav&#39;);
+if (navContainer) {
+    const navHTML = `
+     &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&quot;/index.html&quot;&gt;主页&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/contact.html&quot;&gt;联系我&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/about.html&quot;&gt;关于我&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/ann-his.html&quot;&gt;公告历史&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/fl.html&quot;&gt;友链&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;/addfl.html&quot;&gt;添加友链&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;http://chenwu.miniban.cn/&quot;&gt;论坛&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    `;
+    navContainer.innerHTML = navHTML;
+} else {
+    console.error(&#39;找不到用于放置导航栏的元素（id=&quot;nav&quot;）&#39;);
+}</code></pre>
+<p>再改动页面中以前的导航栏代码:</p>
+<pre><code>&lt;div id=&quot;nav&quot;&gt;&lt;script src=&quot;/navbar.js&quot;&gt;&lt;/script&gt;&lt;/div&gt;</code></pre>
+<p>这样就好了，下次再改动顶部导航栏的时候直接改navbar.js就可以了。</p>
+<p>我还写了一段bash代码(代码名
+<code>wz.sh</code>)，方便更新网站:</p>
+<pre><code>#!/bin/bash
+if [[ $1 == &quot;mkpage&quot; ]]; then
+pandoc md/$2.md -o posts/$2.html --template plain.html
+fi
+if [[ $1 == &quot;upload&quot; ]]; then
+echo &quot;转换成网站主目录...&quot;
+cd chenwumm.github.io
+echo &quot;配置用户名和邮箱...&quot;
+git config --global user.name &quot;chenwumm&quot;
+git config --global user.email &quot;496163862@qq.com&quot;
+echo &quot;添加文件到暂存区...&quot;
+git add .
+read -p &quot;请输入提交信息:&quot; cmt
+git commit -m &quot;$cmt&quot;
+echo &quot;提交信息:$cmt 提交这次改动...&quot;
+echo &quot;推送到远端...&quot;
+git push origin main
+fi</code></pre>
+<p>然后在termux根目录里的.bashrc文件里加入一行<code>alias wz=". ~/wz.sh"</code>，每次更新网站时先写好md页面，然后再
+<code>cd chenwumm.github.io</code>切换到网站主目录，最后执行<code>wz mkpage 刚更新的网站序号;wz upload</code>就可以了。</p></pre>
+        </article>
+    </main>
+<h1>评论</h1>
+<div id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="284a8a19-f56b-49eb-a9ce-5045e10e2419"
+  data-page-id="{{ 网站更换更新方法记录 }}"
+  data-page-url="{{ https://chenwumm.github.io/posts/6.html }}"
+  data-page-title="{{ 网站更换更新方法记录 }}"
+></div>
+<script defer src="https://cusdis.com/js/widget/lang/zh-cn.js"></script>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+<br><br><br>
+    <footer>
+        <p>&copy; 2024~Now 雾曰. 版权所有.</p>
+    </footer>
+</body>
+</html>

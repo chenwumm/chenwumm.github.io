@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快速入门MarkDown!</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="typing"></h1><script src="/js/type.js"></script>
+        <div id="nav"><script src="/js/navbar.js"></script></div>
+    </header>
+    <main>
+        <article>
+            <h2>快速入门MarkDown!</h2>
+            <pre><h3>零 目录</h3>
+<li>零 目录</li>
+<li><a href="#MarkDown是什么">一 MarkDown是什么</a></li><ol><li><a href="#MarkDown简介">MarkDown简介</a></li><li><a href="#MarkDown特性">MarkDown特性</a></li></ol>
+<li><a href="#MarkDown语法">二 MarkDown语法</a></li>
+<ol><li><a href="#标题">标题</a></li><li><a href="#斜粗体">斜粗体</a></li><li><a href="#换行">换行</a></li><li><a href="#分隔线">分隔线</a></li><li><a href="#列表">列表</a></li><li><a href="#链接与图片">链接与图片</a></li><li><a href="#代码块">代码块</a></li><li><a href="#表格">表格</a></li><li><a href="#脚注">脚注</a></li><li><a href="#数学公式">数学公式</a></li></ol>
+<li><a href="#尾巴">尾巴</a></li></ul>
+</pre>
+<pre style="white-space: pre-wrap; word-wrap: break-word;">
+<h3 id="MarkDown是什么">一 MarkDown是什么<h3><h4 id="MarkDown简介">1.MarkDown简介</h4>  Markdown是英国人<cite><b>约翰·格鲁伯(John Gruber)</b></cite>做的一种轻量级标记语言，因为它简洁易懂的特性和易读写性，得到了广泛的支持。
+<img src="/pic/5/1.png"  alt="Markdown图标">
+<h4 id="MarkDown特性">2.MarkDown特性</h4>
+  Markdown特性包括:
+  1.易读易写
+  2.可转成多种文档格式，比如:HTML 、Word、EPUB、PPT等多种格式。
+  3.MarkDown和HTML是兼容的，也就是说你可以直接在MarkDown编辑器中写HTML代码，可以正常显示。
+<h3 id="MarkDown语法">二 MarkDown语法</h3>
+<h4 id="标题">1.标题</h4>
+  Markdown的标题是用<code>#</code>号，#号越多标题就越小:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="display:flex;"><span> # 标题1
+ ## 标题2
+ ### 标题3
+ #### 标题4
+ ##### 标题5
+ ###### 标题6
+</span></span></code></pre></div>
+  最多6个#号，显示效果是这样:
+<h1>标题1</h1><h2>标题2</h2><h3>标题3</h3><h4>标题4</h4><h5>标题5</h5><h6>标题6</h6>
+<h4 id="斜粗体">2.斜粗体</h4>
+  斜体文本用<code>*</code>或<code>_</code>来包裹文字，粗体文本则用两个<code>*</code>或两个<code>_</code>来包裹文字。斜粗体是用三个<code>*</code>或<code>_</code>。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="display:flex;"><span> *斜体文本*
+ _斜体文本_
+ **粗体文本**
+ __粗体文本__
+ ***斜粗体文本***
+ ___斜粗体文本___
+</span></span></code></pre></div>
+  显示效果:
+  <cite>斜体文本</cite>
+  <cite>斜体文本</cite>
+  <b>粗体文本</b>
+  <b>粗体文本</b>
+  <cite><b>斜粗体文本</b></cite>
+  <cite><b>斜粗体文本</b></cite>
+<h4 id="换行">3.换行</h4>
+  换行是在要换行的文字前面加上两个或两个以上的空格或使用HTML的&lt;br&gt;标签。
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="display:flex;"><span> 你好  世界
+ 你好&lt;br&gt;世界
+</span></span></code></pre></div>
+  显示效果:
+  你好
+  世界
+  你好
+  世界
+<h4 id="分隔线">4.分隔线</h4>
+  要在MarkDown中实现分割线，要使用三个<code>-</code>，或使用HTML的&lt;hr&gt;标签。
+<h4 id="列表">5.列表</h4>
+  在标记语言中，列表基本有两种:有序列表和无序列表。
+  有序列表，即列表项前面有数字。无序列表，即列表项前面只有一个圆点。
+  有序列表:在列表项前面加上1. 2. ，即在数字后加上一个英文句点。
+  无序列表:在列表项前面加上<code>+</code>、<code>-</code>、<code>*</code>这三个符号。
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="display:flex;"><span> * 无序列表项1
+ + 无序列表项2
+ - 无序列表项3
+ 1.有序列表项1
+ 2.有序列表项2
+ 3.有序列表项3
+</span></span></code></pre></div>
+  显示效果:
+  <ul><li>无序列表项1</li><li>无序列表项2</li><li>无序列表项3</li></ul><ol><li>有序列表项1</li><li>有序列表项2</li><li>有序列表项3</li></ol>
+  这里插一下，有序列表和无序列表的区别就在于，有序列表用来强调有顺序或步骤的情况，而无序列表是列出一系列相关但没有顺序要求的情况。
+<h4 id="链接与图片">6.链接与图片</h4>
+  链接可以用<code>[点击跳转百度](https://baidu.com)</code>或<code>&lt;https://baidu.com&gt;
+  显示效果:
+  <a href="https://baidu.com">点击跳转百度</a>
+  <a href="https://baidu.com">https://baidu.com</a>
+  如果是指定锚点，那么需要在锚点名称前加上<code>#</code>，如:<code>[跳转到index锚点](#index)</code>
+  如果需要显示图片，要在链接符号前面加个叹号:<code>![图片的替代文本](图片的绝对路径)</code>
+<h4 id="代码块">7.代码块</h4>
+  在MarkDown中，代码块有两种表示方式。
+  第一种是比较短的代码块，如<code>pkg install cmatrix</code>。第二种就是比较长的代码片段，如<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="display:flex;"><span> #!bin/bash
+ echo "Hello, world."
+</span></span></code></pre></div>
+  第一种(短代码块)在MarkDown中用两个反引号<code>`</code>包裹住，第二种(长代码块)要使用6个反引号<code>`</code>包裹住。长代码块之间还可以写上这段代码用的语言，可以高亮显示。如果不写这段代码用的语言，那么默认不高亮。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="display:flex;"><span> `短代码块`
+ ```这段代码用的语言(可写可不写)
+ 长代码块
+ ```
+</span></span></code></pre></div>
+<h4 id="表格">8.表格</h4>
+  在MarkDown中插入表格是非常"抽象"的。在MarkDown中插入表格简直就是"画表格"。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="display:flex;"><span>
+ | 表头 | 表头 | 表头 |
+ | :----: | :----: | :----: | ------
+ | 单元格 | 单元格 | 单元格 |
+ | 单元格 | 单元格 | 单元格 |
+</span></span></code></pre></div>
+  这里插一嘴， 在MarkDown插入表格的格式里，<code>:----:</code>表示居中对齐，<code>:----</code>表示左对齐，<code>----:</code>表示右对齐。
+<h4 id="脚注">9.脚注</h4>
+  在MarkDown中，脚注一般用[^1] [^2]等等这样的方法来表示。
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="display:flex;"><span> 我是晨雾[^1]，一个小学生编程爱好者[^2]。
+</span></span></code></pre></div>
+  我是晨雾<sup>1</sup>，一个小学生编程爱好者<sup>2</sup>。
+<h4 id="数学公式">10.数学公式</h4>
+  这个我不带写了，可以去看<a href="https://www.jianshu.com/p/22117d964baf">LATEX公式总结</a>这篇文章。
+<h3 id="尾巴">尾巴</h3>
+  这篇文章从上午9:40多开始做，连查资料带写代码，到11:30多才写完，如果你看到这，就请评论一句吧🤓
+  文章这么长，难免会出错。你也可以到评论区告诉我一声，我会及时修正，谢谢。
+</pre>
+        </article>
+    </main>
+<h1>评论</h1>
+<div id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="284a8a19-f56b-49eb-a9ce-5045e10e2419"
+  data-page-id="{{ 快速入门MarkDown! }}"
+  data-page-url="{{ https://chenwumm.github.io/posts/5.html }}"
+  data-page-title="{{ 快速入门MarkDown! }}"
+></div>
+<script defer src="https://cusdis.com/js/widget/lang/zh-cn.js"></script>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+<br><br><br>
+    <footer>
+        <p>&copy; 2024~Now 雾曰. 版权所有.</p>
+    </footer>
+</body>
+</html>

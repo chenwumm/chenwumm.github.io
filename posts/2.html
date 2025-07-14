@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我是如何更新网站的</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="typing"></h1><script src="/js/type.js"></script>
+        <div id="nav"><script src="/js/navbar.js"></script></div>
+    </header>
+    <main>
+        <article>
+            <h2>我是如何更新网站的</h2>
+            <pre>  先说下:这个网站是用GitHub托管的，所以直接用git命令就行。由于我是用手机更新，所以要下载termux。
+  准备工作:下载必要软件包并完成git配置和克隆仓库
+  这一步是刚下载termux时候必要的，这里简单描述一下:
+  <code style="color: #ccc;">pkg install git python openssh #这里下载Python是因为后面要用HTTP.Server预览，下载openssh是因为要生成公钥
+git clone https://github.com/chenwumm/chenwumm.github.io/ #克隆仓库
+ssh-keygen -t rsa #生成钥匙
+  </code>
+  然后到MT管理器里打开Termux主目录再打开.ssh目录，查看id_rsa.pub文件并复制公钥。然后再打开https://github.com/，进入我的主页，进入设置页面，找到SSH and GPG Keys，点击New SSH Key。在“Title”中随便输入想要的内容，“Key Type”不更改，在“Key”中填入刚刚复制的 id_rsa.pub 中的内容，然后点击“保存”。然后在Termux里面输入ssh -T git@github.com验证一下是否配置成功。
+  <h3>使用python的HTTP.Server预览</h3>
+  由于我们前面克隆过仓库，所以直接切换到仓库目录:
+  <code style="color: #ccc;">cd chenwumm.github.io</code>
+  然后添加页面，写入页面代码，在主页添加文章入口，直接在终端中执行
+  <code style="color: #ccc;">python -m http.server 8000</code>
+  然后在浏览器中访问<code style="color: #ccc;">http://[::]:8000/</code>就可以预览网站了。
+  <h3>更新本地网站</h3>
+  我写了一段bash代码，可以自动部署到GitHub上面:
+  <code style="color: #ccc;">bswz.sh<hr>
+#!/bin/bash
+#部署网站
+echo "转换成网站主目录..."
+cd chenwumm.github.io
+echo "配置用户名和邮箱..."
+git config --global user.name "chenwumm" 
+git config --global user.email "496163862@qq.com" 
+echo "添加文件到暂存区..."
+git add .
+read -p "请输入提交信息:" cmt
+git commit -m "$cmt"
+echo "提交信息:$cmt 提交这次改动..."
+echo "推送到远端..."
+git push origin main
+cd ~
+</code>
+  执行这段代码，就直接推送到GitHub上面了。
+  4月6日
+</pre>
+        </article>
+    </main>
+    <h1>评论</h1>
+    <div id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="284a8a19-f56b-49eb-a9ce-5045e10e2419"
+  data-page-id="{{ 我是如何更新网站的 }}"
+  data-page-url="{{ https://chenwumm.github.io/posts/2.html }}"
+  data-page-title="{{ 我是如何更新网站的 }}"
+></div>
+<script defer src="https://cusdis.com/js/widget/lang/zh-cn.js"></script>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+<br><br><br>
+    <footer>
+        <p>&copy; 2024~Now 雾曰. 版权所有.</p>
+    </footer>
+</body>
+</html>

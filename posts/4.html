@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网站有评论区了?</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="typing"></h1><script src="/js/type.js"></script>
+        <div id="nav"><script src="/js/navbar.js"></script></div>
+    </header>
+    <main>
+        <article>
+            <h2>我的网站有评论区了?</h2>
+            <pre>先说一下，我的网站是用GitHub托管的，所以是静态网站。我查了很多在静态网站中做评论区的方法，都没有成功。后来我闲得没事在bing上搜.gitbub.io看别人的github博客，有个博客启发了我。
+  这里使用的评论系统是Cusdis，这里简略描述一下嵌入步骤:
+<h3>登录Cusdis官网和添加站点</h3>
+  你可以使用谷歌账号、GitHub账号和GitLab账号登录Cusdis官网。登录之后就可以添加站点了。
+<h3>获取嵌入代码</h3>
+  进入Cusdis dashboard之后，点击上面的"Embeded code"按钮获取嵌入代码。
+  获取嵌入代码之后，你就可以把代码嵌入到你的网页上，更改一下花括号里面的内容( {{ PAGE_ID }} 、 {{ PAGE_URL }} 、 {{ PAGE_TITLE }} )刷新就会看到你的评论框了。
+</pre>
+        </article>
+    </main>
+    <h1>评论</h1>
+    <div id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="284a8a19-f56b-49eb-a9ce-5045e10e2419"
+  data-page-id="{{ 我的网站有评论区了? }}"
+  data-page-url="{{ https://chenwumm.github.io/posts/4.html }}"
+  data-page-title="{{ 我的网站有评论区了? }}"
+></div>
+<script defer src="https://cusdis.com/js/widget/lang/zh-cn.js"></script>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+<br><br><br>
+    <footer>
+        <p>&copy; 2024~Now 雾曰. 版权所有.</p>
+    </footer>
+</body>
+</html>
