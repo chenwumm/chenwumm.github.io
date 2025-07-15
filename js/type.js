@@ -99,7 +99,7 @@ function typeWithCursor(elementId, texts, options = {}) {
 const texts = [
     " 雾曰",
     " 晨雾㐅是只屑的博客",
-    " 一枚小学生的博客",
+    " 一枚学生党的博客",
 ];
 
 const stopTyping = typeWithCursor('typing', texts, {
