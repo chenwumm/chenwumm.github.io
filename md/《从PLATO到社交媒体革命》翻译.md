@@ -1,0 +1,233 @@
+---
+title: 《从PLATO到社交媒体革命》翻译
+---
+
+[原文](#原文)
+[中文翻译](#中文翻译)
+
+# 原文
+
+Between PLATO and the Social Media Revolution
+
+Copyright © 1983 by David R. Woolley
+
+It all started with PLATO. In the early 1970’s this oddball of a computer
+system, built by an unlikely crowd of non-computer scientists at the
+University of Illinois, gave birth to a strange new subculture. College
+students stayed glued to PLATO terminals until all hours of the night,
+fighting it out with players across the room or across the country in
+"moonwar" or "dogfight", or feverishly programming their own idea of the
+ultimate game. Romances blossomed in locked channels of "talk-o- matic" and
+through "personal notes." And through the PLATO "group notes" feature, people
+held long-term discussions on just about any subject imaginable: science
+fiction, women’s rights, football, the defense budget, rock ’n roll. People
+swapped chili secrets in "Recipes", wrote film reviews in "Movies", debated
+theology in "Religion", and anonymously advised each other on personal
+problems in "Interpersonal Relationships." The poetically inclined left their
+latest works in "Poetry", and almost everyone read "Grapenotes" now and then
+for the latest in a series of bizarre stories by the mysterious "Dr. Graper."
+
+They were heady times for those of us at the center of it all, and especially
+for me, since I had written the group notes program that made much of this
+activity possible. As a teenage college kid I found myself elevated to demigod
+status by the users simply for having stumbled into a part-time job as a PLATO
+systems programmer. In 1973 I had been assigned to come up with something -
+anything - that would facilitate communication via the computer. At that time,
+it was perceived mainly as a two-way medium to allow us, the almighty system
+staff, to talk to the lowly users. Consequently, I built three notes
+categories into the program: "System Announcements", "Help Notes", for users
+to ask us questions, and "Public Notes" for everything else. "Public Notes"
+especially was an immediate hit. Lo and behold, the users were talking mainly
+to each other. And despite attempts to limit discussion to PLATO-related
+topics, it quickly became a forum where people talked about everything under
+the sun.
+
+It soon became obvious that three categories was absurdly few, and I began
+plans for an expanded system that could handle up to 60 categories, to be
+defined by the system staff. But the critical breakthrough came when I noticed
+that users were writing their own notes programs. Some were clumsy to use;
+others were better in many ways than the system-provided notes feature. Some
+were set up for public access, while others were created only for notes
+between members of a group working on a particular development project. But
+they were all responding to the pressures inherent in a system where the
+topics of discussion were tightly controlled by a select group of systems
+programmers. When I realized this, I generalized my program so that anyone
+could set up a "notes file" in a minute or two, declaring the topic of
+discussion and its accessibility to other users however they wanted. I also
+incorporated many of the nice features I had seen in the notes programs other
+people had developed. The result was an explosion of creativity none of us had
+foreseen. Suddenly everyone was free to express themselves about literally
+anything, and whether you were asking a question about photographic technique
+in notes file "Cameras" or just scribbling some graffiti in "Pad", you could
+be sure that other people who shared your interests would read your note and
+respond. The sense of community it engendered was truly magical, and I was as
+entranced as anyone.
+
+Looking back, it’s clear that "group notes" was an idea that was floating
+around in the ether at the time, and I was merely the instrument of its
+expression on PLATO. I can no more claim credit for its invention than Thomas
+Jefferson’s quill pen could claim to have produced the ideas behind the
+Declaration of Independence. From the beginning, the program I wrote and all
+its enhancements were either suggested directly by users or were made obvious
+to me by the contortions they were going through to use the system in a way
+that hadn’t occurred to me. Not only that, but the same ideas were
+simultaneously finding expression on systems other than PLATO. Programmers
+elsewhere were independently creating similar computer conferencing programs,
+and subcultures like the PLATO community were springing up around them.
+
+Many of us who spent our college years with PLATO have gone on to various
+careers in the computer industry. We have always dreamed of recreating the
+magic of the PLATO community on a larger scale. In fact, PLATO and some of the
+other communities like it still exist, but they are mostly small enclaves,
+unknown and inaccessible to the public at large. They are based on large
+mainframe computers at fixed central locations, which makes both
+communications costs and hourly usage charges prohibitively expensive for the
+average citizen. We PLATO folk generally had access under the auspices of
+government-funded research programs (or were able to wangle access privileges
+from friends who did.) But our experience left us with the conviction that
+there was some universal principle at work which produced the PLATO
+phenomenon. Because of its function as an education system, PLATO drew in
+people from all walks of life, from grade school children to physics
+professors, from medical students to prison inmates. And everyone was
+fascinated by group notes.
+
+Unfortunately, there has been no clear path to making this kind of
+communication generally available. But in the last three or four years
+developments in technology have begun to open up some new possibilities.
+Millions of people have purchased personal computers, and guess what? Hundreds
+of tiny bulletin board systems have popped up spontaneously all over the
+country, which personal computer owners can dial into and use to exchange
+messages and software. These bulletin boards are generally run by computer
+hobbyists as a free service out of their homes. It’s fantastic to see people
+taking the initiative to maintain these things at their own expense, often in
+complete anonymity. It shows what a tremendous amount of creativity and
+enthusiasm exists among these computer pioneers. And it shows the powerful
+desire people have to connect with others who share their interests.
+
+Of course, by their very nature as a free service these bulletin boards tend
+to be a little flakey. They aren’t well advertised, so it takes some sleuthing
+to find ones you’re interested in, and they are liable to quit working for
+long periods or disappear entirely without notice. And since they are limited
+to one user at a time, it’s hard to get into the more popular bulletin boards.
+But there is a growing community of computer users out there, and the bulletin
+boards are the attempts of its members to reach out and find each other.
+
+The electronicizing of America is happening. We aren’t far from the day when
+home computers will be as common as televisions, and most of them will
+eventually be linked into some sort of network. The only question is what form
+the networks will take. A lot of large institutions are becoming aware that
+there is some kind of lucrative market here and they are groping around in the
+dark trying to find it. They would all like to squeeze it into the mold of the
+services they are used to providing: newspapers believe that electronic news
+delivery is the wave of the future, while department store chains think it is
+"teleshopping", and banks are getting excited about home banking services. And
+just about everybody thinks they can attract people with access to on-line
+encyclopedias and humongous databases.
+
+To us, the answer is clear: people want access to other people. All that other
+stuff is fine, but it’s secondary. The bulletin boards have broken the ground,
+but the field is still in a pretty chaotic state. To those of us who were
+around PLATO seven or eight years ago, this situation seems very familiar.
+We’ve seen this happen before, and we know how it all came out. The bulletin
+board phenomenon is an exuberant expression of peoples’ need to communicate,
+and it’s not something to be controlled. But it does need some organization,
+and that’s what we hope to provide.
+
+By running bulletin boards as a business we can afford to offer a broader,
+more reliable service. We can support many simultaneous users, so you won’t
+get a busy signal when you dial in, and we’ll be able to provide interterminal
+games and talk-o- matic (a CB radio simulator.) There will be plenty of space
+for people to start up group discussions on any topics they wish. By setting
+up small systems in each city we can get by with a low monthly subscription
+charge, and users can access the system via a local phone call. Subscribers
+will be able to send personal notes to other people on the same system for
+free, or to people in other cities for a nominal charge. They won’t need much
+in the way of equipment to be able to hook into our system, either. Any
+personal computer - even a $40 Sinclair - will work, along with a modem, which
+can be purchased for $80 or so.
+
+The local nature of these systems will have some other benefits, as well. We
+expect people will use them to post want ads, organize gatherings, discuss
+local issues, review local restaurants, etc. You’ll be able to ask questions
+like "Where’s the best place around here to get my VW fixed" and get answers
+from people who know. In short, it will foster a real sense of community.
+
+We are starting out with very little money, and in a way that’s an advantage,
+because it means that ownership and control of the business will be
+decentralized. Rather than looking for money from a few big investors, we
+would rather grow by finding people willing to invest their time and small
+amounts of money, and we’ve designed an organizational structure that will
+encourage this.
+
+We hope to to gather together old friends from our PLATO days, the new
+independent bulletin board operators, and anyone else who shares our vision
+and is able to help.
+
+The institutions trying to get into this market see themselves as information
+providers, and their customers as simply consumers. But we know that the most
+valuable resource on a computer network is not its databases, it is the users
+themselves. Given the chance, people would rather take an active role and talk
+to each other instead of sitting back to be spoon-fed. We believe this is a
+concept that will take off on its own, given a minimum amount of structure and
+a little spark to get it started. Our role is simply to organize people and
+technology in a way that will enhance human communication and increase human
+options.
+
+We don’t have to recreate the magic of PLATO. It’s already there. We just have
+to let it grow.
+
+
+--
+Explanatory note, May, 2008:
+
+In 1983 I was living in San Diego with Jim Bowery and Steve Freyder, two
+friends from my PLATO days. We had this plan to start a series of online
+community networks based on dial-up bulletin boards. We had a great idea, but
+no money, and we were totally naive about starting a business. As a result,
+our partnership fell apart and our plans never got off the ground.
+
+But this article laying out our concept is still kind of interesting. It's a
+snapshot, taken 25 years ago, of my vision of the future.
+
+# 中文翻译
+(DeepSeek翻译)
+
+从PLATO到社交媒体革命
+
+版权所有 © 1983 大卫·R·伍利
+
+这一切都始于PLATO。在20世纪70年代初，这台由伊利诺伊大学一群不太可能的非计算机科学家建造的古怪计算机系统，孕育出了一个奇特的新亚文化。大学生们会整夜守在PLATO终端前，与房间对面或全国各地的玩家在"月亮战争"或"空战"游戏中一决高下，或者狂热地编程，试图实现自己心目中的终极游戏。浪漫情愫在"自动交谈"的加密频道和"个人便条"中悄然绽放。而通过PLATO的"群组便条"功能，人们可以就任何能想到的主题进行长期讨论：科幻小说、妇女权利、橄榄球、国防预算、摇滚乐。人们在"食谱"中交换辣椒秘方，在"电影"中撰写影评，在"宗教"中辩论神学，在"人际关系"中匿名就个人问题相互建议。有诗意倾向的人在"诗歌"中留下最新作品，几乎每个人都会时不时地阅读"葡萄笔记"，以了解神秘的"格雷普博士"创作的一系列离奇故事的最新篇章。
+
+对于我们这些身处这一切中心的人来说，那是一段令人陶醉的时光，尤其对我而言，因为正是我编写的群组便条程序使这些活动中的大部分成为可能。作为一个十几岁的大学生，我发现自己仅仅因为偶然得到一份PLATO系统程序员的兼职工作，就被用户们捧上了神坛。1973年，我被分配去搞出点东西来——任何东西都行——只要能促进通过计算机进行的交流。在当时，这主要被视为一种双向媒介，允许我们这些高高在上的系统工作人员与底层的用户对话。因此，我在程序中内置了三个便条类别："系统公告"、"求助便条"（供用户向我们提问）和"公共便条"（用于其他所有事情）。"公共便条"尤其一炮而红。瞧，用户们主要是在互相交谈。尽管试图将讨论限制在与PLATO相关的主题内，但它很快就成了一个人们无所不谈的论坛。
+
+很快，三个类别显然少得可笑，我开始规划一个扩展系统，能够处理多达60个由系统工作人员定义的类别。但关键的突破来自于我注意到用户们正在编写他们自己的便条程序。有些用起来很笨拙；另一些则在许多方面比系统提供的便条功能更好。有些设置为公共访问，而另一些则仅为特定开发项目小组的成员之间传递便条而创建。但它们都在回应一个系统中固有的压力：在这个系统中，讨论的主题被一小群系统程序员严格控制。当我意识到这一点时，我推广了我的程序，让任何人都能在一两分钟内建立一个"便条文件"，随心所欲地声明讨论主题及其对其他用户的可访问性。我还整合了许多我在别人开发的其他便条程序中看到的好功能。其结果是我们所有人都未曾预见到的创造力大爆发。突然间，每个人都可以自由地表达自己，谈论任何东西，无论你是在"相机"便条文件中询问摄影技术问题，还是仅仅在"便签本"里乱涂乱画，你都可以肯定，其他与你有共同兴趣的人会读到你的便条并作出回应。它所营造的社群感真的很神奇，我和其他人一样着迷。
+
+回首过去，很明显"群组便条"是一个当时在空气中飘浮的想法，而我仅仅是在PLATO上实现它的工具。我不能因此声称发明了它，就像托马斯·杰斐逊的羽毛笔不能声称产生了《独立宣言》背后的思想一样。从一开始，我编写的程序及其所有改进，要么直接由用户提出，要么是他们在试图以我未曾想到的方式使用系统时所经历的曲折让我意识到必须如此。不仅如此，同样的想法也同时在PLATO以外的系统上得到了表达。其他地方的程序员也在独立地创建类似的计算机会议程序，而像PLATO社区这样的亚文化也在它们周围如雨后春笋般涌现。
+
+我们这些在PLATO度过大学时光的许多人后来都进入了计算机行业的各个领域。我们一直梦想着在更大范围内重现PLATO社区的魔力。事实上，PLATO和其他一些类似的社区仍然存在，但它们大多是小型飞地，不为公众所知，也无法为公众所用。它们基于固定中心地点的大型主机，这使得通信成本和每小时的使用费对普通公民来说高得令人望而却步。我们这些PLATO人通常是在政府资助的研究项目支持下获得访问权限（或者能够从有权限的朋友那里设法弄到）。但我们的经历让我们确信，有某种普遍原理在起作用，从而产生了PLATO现象。由于作为教育系统的功能，PLATO吸引了来自各行各业的人，从小学生到物理学教授，从医学生到监狱囚犯。而每个人都对群组便条着迷。
+
+不幸的是，要让这种交流普及开来，一直都没有明确的途径。但在过去的三四年里，技术的发展开始开辟一些新的可能性。数百万人购买了个人电脑，你猜怎么着？全国各地自发涌现出了数百个小型电子公告板系统，个人电脑用户可以拨号进入并使用它们交换信息和软件。这些公告板通常由计算机爱好者作为免费服务在家中运行。看到人们主动自费维护这些东西，而且常常是完全匿名地，真是太棒了。这表明这些计算机先驱者中存在着多么巨大的创造力和热情。它也表明了人们与志同道合者建立联系的强烈愿望。
+
+当然，由于其免费服务的本质，这些公告板往往有点不太可靠。它们没有很好的宣传，所以需要一些侦探工作才能找到你感兴趣的，而且它们可能会长时间无法工作或毫无预兆地完全消失。由于一次只限一个用户使用，热门公告板很难挤进去。但那里有一个不断壮大的计算机用户社区，而公告板正是其成员试图伸出触角、找到彼此的努力。
+
+美国的电子化正在发生。家用电脑像电视一样普及的那一天离我们不远了，而且它们中的大多数最终将连接到某种网络中。唯一的问题在于网络将采取何种形式。许多大型机构开始意识到这里存在某种有利可图的市场，它们正在黑暗中摸索着试图找到它。它们都希望将其塞进它们习惯提供的服务模式中：报纸认为电子新闻传递是未来潮流，而连锁百货公司则认为这是"电子购物"，银行则对家庭银行服务感到兴奋。几乎所有人都认为，他们可以通过提供在线百科全书和海量数据库的访问来吸引人们。
+
+对我们来说，答案很明确：人们想要的是接触到其他人。所有其他的东西都很好，但都是次要的。公告板已经开辟了道路，但这个领域仍然处于相当混乱的状态。对我们这些七八年前就在PLATO的人来说，这种情况似曾相识。我们以前见过这种情况发生，我们知道结果如何。公告板现象是人们交流需求的热情表达，这不是应该被控制的东西。但它确实需要一些组织，而这正是我们希望提供的。
+
+通过将公告板作为一项业务来运营，我们可以提供更广泛、更可靠的服务。我们可以支持多个用户同时使用，这样你拨入时就不会遇到忙音，我们还能提供终端间游戏和自动交谈（一种CB无线电模拟器）。将有足够的空间让人们就他们希望的任何主题发起小组讨论。通过在各个城市设立小型系统，我们可以收取低廉的月订阅费，用户可以通过本地电话访问系统。订阅者可以免费向同一系统上的其他人发送个人便条，或者支付象征性费用向其他城市的人发送便条。他们连接我们的系统也不需要太多设备。任何个人电脑——甚至是一台40美元的天才（Sinclair）电脑——加上一个调制解调器（大约80美元就能买到）就可以工作。
+
+这些系统的本地化特性还将带来一些其他好处。我们预计人们会使用它们发布分类广告、组织聚会、讨论本地问题、评论本地餐馆等等。你可以问诸如"这附近哪里修大众汽车最好？"之类的问题，并从了解情况的人那里得到答案。简而言之，它将培养一种真正的社区感。
+
+我们起步时资金很少，从某种程度上说，这是一个优势，因为这意味着企业的所有权和控制权将是分散的。与其从少数大投资者那里寻求资金，我们更愿意通过寻找愿意投入时间和少量资金的人来发展，并且我们设计了一种鼓励这种做法的组织结构。
+
+我们希望将PLATO时代的老朋友、新的独立公告板运营商以及任何认同我们愿景并能提供帮助的人聚集起来。
+
+那些试图进入这个市场的机构将自己视为信息提供者，将他们的客户视为单纯的消费者。但我们知道，计算机网络中最宝贵的资源不是它的数据库，而是用户本身。只要有机会，人们更愿意扮演积极的角色，互相交谈，而不是坐着被动接受灌输。我们相信，只要有最低限度的结构和一点启动的火花，这个概念就会自行蓬勃发展。我们的角色就是以能够加强人际沟通和增加人类选择的方式，将人和技术组织起来。
+
+我们不必重现PLATO的魔力。它已经在那里了。我们只需让它成长。
+
+-- 2008年5月的解释性说明：
+
+1983年，我和我的两位PLATO时代的朋友吉姆·鲍厄里和史蒂夫·弗雷德住在圣地亚哥。我们有一个计划，要基于拨号公告板创办一系列在线社区网络。我们有一个好主意，但没有钱，而且我们对创业完全天真。结果，我们的合作关系破裂，计划也从未付诸实施。
+
+但这篇阐述我们概念的文章仍然有点意思。它是25年前对我未来愿景的一次快照。
